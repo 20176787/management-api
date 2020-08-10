@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Image;
+use App\UserImages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
@@ -122,6 +123,7 @@ class AuthController extends Controller
                 } else if ((Hash::check(request('new_password'), Auth::user()->password)) == true) {
                     $arr = array("status" => 400, "message" => "Please enter a password which is not similar then current password.", "data" => array());
                 } else {
+//                    $input['new_password'] = bcrypt($input['new_password']);
                     User::where('id', $userid)->update(['password' => Hash::make($input['new_password'])]);
                     $arr = array("status" => 200, "message" => "Password updated successfully.", "data" => array());
                 }
@@ -146,11 +148,18 @@ class AuthController extends Controller
             $destination_path = public_path($sub_path);
             $saveImage = $file->move($destination_path, $real_name);
             if ($saveImage) {
-//            $user[$key] = url($sub_path . '/' . $real_name);
-                var_dump($saveImage);
-                die();
+                $userid = Auth::guard('api')->user()->id;
+                $save   =   UserImages::create([
+                    'image_path' => 'http://8d2cddcc486b.ngrok.io/'. $sub_path . '/' . $real_name,
+                    'user_id' => $userid,
+                ]);
+                var_dump($userid);
             }
         }
+    }
+    public function getImageUpload(Request $request){
+        $userid = Auth::guard('api')->user()->id;
+        return response()->json(UserImages::where('user_id', $userid)->get());
     }
 
 }
