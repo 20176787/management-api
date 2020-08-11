@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Image;
 use App\UserImages;
+use http\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\User;
 use Validator;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 class AuthController extends Controller
 {
     public $successStatus = 200;
@@ -44,7 +47,6 @@ class AuthController extends Controller
                 $tokenResult->token->expires_at
             )->toDateTimeString()], $this->successStatus);
     }
-
     /**
      * Login user and create token
      *
@@ -150,7 +152,7 @@ class AuthController extends Controller
             if ($saveImage) {
                 $userid = Auth::guard('api')->user()->id;
                 $save   =   UserImages::create([
-                    'image_path' => 'http://8d2cddcc486b.ngrok.io/'. $sub_path . '/' . $real_name,
+                    'image_path' => 'http://35f5c59e544b.ngrok.io/'. $sub_path . '/' . $real_name,
                     'user_id' => $userid,
                 ]);
                 var_dump($userid);
@@ -160,6 +162,18 @@ class AuthController extends Controller
     public function getImageUpload(Request $request){
         $userid = Auth::guard('api')->user()->id;
         return response()->json(UserImages::where('user_id', $userid)->get());
+    }
+    public function deleteImage($id,Request $request){
+//        $product = UserImages::where('id',$id)->get();
+//        $productImage = $product[0]->image_path;
+//        $productImage ='/public/files/' .basename($productImage);
+//        if(File::exists($productImage)){
+//            File::delete($productImage);
+//        }
+        UserImages::where('id', $id)->delete();
+        return response()->json([
+            'message' => 'Delete image success'
+        ]);
     }
 
 }

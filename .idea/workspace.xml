@@ -22,7 +22,6 @@
     <list default="true" id="9c4a8d73-4b93-4c9f-9ab0-0b6b97742ba5" name="Default Changelist" comment="fasfddasd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +188,8 @@
       <workItem from="1596591625850" duration="8366000" />
       <workItem from="1596678293787" duration="12664000" />
       <workItem from="1596764302923" duration="21127000" />
-      <workItem from="1597023563282" duration="16724000" />
+      <workItem from="1597023563282" duration="16753000" />
+      <workItem from="1597110104725" duration="10190000" />
     </task>
     <task id="LOCAL-00001" summary="fasfddasd">
       <created>1596710227725</created>
@@ -205,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596798051369</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fasfddasd">
+      <created>1597056292772</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597056292772</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,10 +251,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="470" y="69" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596536664195" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1596798057311">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1597056297402">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596798057311" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1597056297402" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1596535814557">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

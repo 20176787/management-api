@@ -27,5 +27,6 @@ Route::group([
         Route::get('user', 'AuthController@user');
         Route::get('image', 'AuthController@getImageUpload');
         Route::put('update/{id}', 'AuthController@update');
+        Route::get('deleteImage/{id}', 'AuthController@deleteImage');
     });
 });
