@@ -140,22 +140,47 @@ class AuthController extends Controller
         }
         return Response()->json($arr);
     }
-    public function fileUpload(Request $request){
-        $input = $request->all();
-        $File = $input;
-        foreach($File as $file) {
-            $sub_path = 'files';
-            $datetime = new \DateTime();
-            $real_name = $datetime->format('Y-m-d_H-i-s') . '_' . $file->getClientOriginalName();
-            $destination_path = public_path($sub_path);
-            $saveImage = $file->move($destination_path, $real_name);
-            if ($saveImage) {
-                $userid = Auth::guard('api')->user()->id;
-                $save   =   UserImages::create([
-                    'image_path' => 'http://35f5c59e544b.ngrok.io/'. $sub_path . '/' . $real_name,
-                    'user_id' => $userid,
-                ]);
-                var_dump($userid);
+    public function fileUpload($key,Request $request){
+        if($key=='images') {
+            $input = $request->all();
+            $File = $input;
+            foreach ($File as $file) {
+                $sub_path = 'files';
+                $datetime = new \DateTime();
+                $real_name = $datetime->format('Y-m-d_H-i-s') . '_' . $file->getClientOriginalName();
+                $destination_path = public_path($sub_path);
+                $saveImage = $file->move($destination_path, $real_name);
+                if ($saveImage) {
+                    $userid = Auth::guard('api')->user()->id;
+                    $save = UserImages::create([
+                        'image_path' => 'http://42d4243c4441.ngrok.io/' . $sub_path . '/' . $real_name,
+                        'user_id' => $userid,
+                        'is_avatar' => 'false'
+                    ]);
+                    var_dump($userid);
+                }
+            }
+        }
+        if($key == 'avatar')
+        {
+            $input = $request->all();
+            $File = $input;
+            foreach ($File as $file) {
+                $sub_path = 'files';
+                $datetime = new \DateTime();
+                $real_name = $datetime->format('Y-m-d_H-i-s') . '_' . $file->getClientOriginalName();
+                $destination_path = public_path($sub_path);
+                $saveImage = $file->move($destination_path, $real_name);
+                if ($saveImage) {
+                    $userid = Auth::guard('api')->user()->id;
+                    $save = UserImages::create([
+                        'image_path' => 'http://42d4243c4441.ngrok.io/' . $sub_path . '/' . $real_name,
+                        'user_id' => $userid,
+                        'is_avatar' => 'true'
+                    ]);
+                    User::where('id', $userid)->update(['avatar_url'=>'http://42d4243c4441.ngrok.io/' . $sub_path . '/' . $real_name]);
+                    var_dump($userid);
+                }
             }
         }
     }
@@ -171,6 +196,15 @@ class AuthController extends Controller
 //            File::delete($productImage);
 //        }
         UserImages::where('id', $id)->delete();
+        return response()->json([
+            'message' => 'Delete image success'
+        ]);
+    }
+    public function multiDeleteImages(Request $request){
+        $File = $request->all();
+        foreach ($File as $file){
+            UserImages::where('id', $file)->delete();
+        }
         return response()->json([
             'message' => 'Delete image success'
         ]);
