@@ -25,6 +25,7 @@ Route::group([
         Route::post('change_password', 'AuthController@changePassword');
         Route::post('fileUpload/{key}', 'AuthController@fileUpload');
         Route::get('user', 'AuthController@user');
+        Route::get('allUser', 'AuthController@allUser');
         Route::get('image', 'AuthController@getImageUpload');
         Route::put('update/{id}', 'AuthController@update');
         Route::get('deleteImage/{id}', 'AuthController@deleteImage');

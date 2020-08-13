@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +192,9 @@
       <workItem from="1596764302923" duration="21127000" />
       <workItem from="1597023563282" duration="16753000" />
       <workItem from="1597110104725" duration="10287000" />
-      <workItem from="1597196449675" duration="9243000" />
+      <workItem from="1597196449675" duration="9353000" />
+      <workItem from="1597230606813" duration="27000" />
+      <workItem from="1597282785753" duration="6707000" />
     </task>
     <task id="LOCAL-00001" summary="fasfddasd">
       <created>1596710227725</created>
@@ -221,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597142728039</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fasfddasd">
+      <created>1597230407364</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597230407364</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,14 +270,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="470" y="69" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596536664195" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1597142732602">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1597230622707">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1597142732602" />
-    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1596535814557">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1597230622707" />
+    <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1597317160761">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1596535814557" />
+    <state x="390" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1597317160761" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1596797626213">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
