@@ -22,9 +22,6 @@
     <list default="true" id="9c4a8d73-4b93-4c9f-9ab0-0b6b97742ba5" name="Default Changelist" comment="fasfddasd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +164,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-iamge-upload" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -195,6 +192,9 @@
       <workItem from="1597196449675" duration="9353000" />
       <workItem from="1597230606813" duration="27000" />
       <workItem from="1597282785753" duration="6707000" />
+      <workItem from="1597317500157" duration="78000" />
+      <workItem from="1597369524959" duration="7980000" />
+      <workItem from="1597395177085" duration="339000" />
     </task>
     <task id="LOCAL-00001" summary="fasfddasd">
       <created>1596710227725</created>
@@ -231,7 +231,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597230407364</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fasfddasd">
+      <created>1597317527143</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597317527143</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fasfddasd">
+      <created>1597317562921</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597317562921</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,10 +284,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="470" y="69" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596536664195" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1597230622707">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1597317568215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1597230622707" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1597317568215" />
     <state x="390" y="0" width="585" height="728" key="find.popup" timestamp="1597317160761">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

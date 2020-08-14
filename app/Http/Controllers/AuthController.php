@@ -30,7 +30,7 @@ class AuthController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
-            'phone' => 'required|string|unique:users',
+            'phone' => 'required|regex:/(0)[0-9]{9}/|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
         if ($validator->fails()) {
@@ -60,7 +60,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $request->validate([
-            'phone' => 'required|string',
+            'phone' => 'required|regex:/(0)[0-9]{9}/',
             'password' => 'required|string',
             'remember_me' => 'boolean'
         ]);
@@ -160,7 +160,7 @@ class AuthController extends Controller
                 if ($saveImage) {
                     $userid = Auth::guard('api')->user()->id;
                     $save = UserImages::create([
-                        'image_path' => 'http://368e1b578b07.ngrok.io/' . $sub_path . '/' . $real_name,
+                        'image_path' => 'http://ad6358f65535.ngrok.io/' . $sub_path . '/' . $real_name,
                         'user_id' => $userid,
                         'is_avatar' => 'false'
                     ]);
@@ -181,11 +181,11 @@ class AuthController extends Controller
                 if ($saveImage) {
                     $userid = Auth::guard('api')->user()->id;
                     $save = UserImages::create([
-                        'image_path' => 'http://368e1b578b07.ngrok.io/' . $sub_path . '/' . $real_name,
+                        'image_path' => 'http://ad6358f65535.ngrok.io/' . $sub_path . '/' . $real_name,
                         'user_id' => $userid,
                         'is_avatar' => 'true'
                     ]);
-                    User::where('id', $userid)->update(['avatar_url'=>'http://368e1b578b07.ngrok.io/' . $sub_path . '/' . $real_name]);
+                    User::where('id', $userid)->update(['avatar_url'=>'http://ad6358f65535.ngrok.io/' . $sub_path . '/' . $real_name]);
                     var_dump($userid);
                 }
             }
@@ -210,8 +210,9 @@ class AuthController extends Controller
     public function multiDeleteImages(Request $request){
         $File = $request->all();
         foreach ($File as $file){
-            UserImages::where('id', $file['id'])->delete();
 
+            User::where('avatar_url',$file['url'])->update(['avatar_url' => null]);
+            UserImages::where('id', $file['id'])->delete();
         }
         return response()->json([
             'message' => 'Delete image success'
